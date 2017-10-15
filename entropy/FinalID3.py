@@ -16,7 +16,8 @@ from matplotlib import pylab as plt
 targetAttribute = 'Poisonous/Edible'
 targetValue = []
 predictedList= []
-minimalGainThreshold = 1e-6
+# maxGainAttr:  spore-print-color    if  maxInfoGain > 0.144354902043, we get the data classified incorrectly
+minimalGainThreshold =0.144
 defaultTargetValue = 'p'
 rawDataSet = 'MushroomDataSet_Before_PreProcessing.xlsx'
 processedDataSet = 'MushroomDataSet_After_PreProcessing.xlsx'
