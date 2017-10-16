@@ -25,7 +25,7 @@ processedDataSet = 'MushroomDataSet_After_PreProcessing.xlsx'
 columnToProcess = 'stalk-root'
 res = {}
 rfTargetValue = []
-numberOfTrees = 100
+numberOfTrees = 500
 ###################################################################################################################
 ###################################################################################################################
 datasetAfterProcessing = pd.read_excel(processedDataSet)
@@ -33,7 +33,7 @@ X = datasetAfterProcessing.drop(labels=targetAttribute, axis=1)
 y = datasetAfterProcessing[targetAttribute]
 
 for i in range(numberOfTrees):
-    random_state = random.randint(0,7)
+    random_state = random.randint(0,10)
     X_train_rf,X_test_rf,Y_train_rf,Y_test_rf = train_test_split(X,y,test_size = 0.2 ,random_state = random_state)
     X_train_rf[targetAttribute] = Y_train_rf
     targetValue = initializeList(X_train_rf)
