@@ -7,4 +7,7 @@
 
 Tree visualization 
 
+![tree visualize](https://github.com/barsanayak/DecisionTree/blob/master/decisiontree/examp1_graph.png)
+
+
 
